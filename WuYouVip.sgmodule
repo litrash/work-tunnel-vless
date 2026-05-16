@@ -4,7 +4,7 @@
 #!homepage=https://github.com/xxx
 
 [Script]
-http-response ^http://www\.wuxueyun\.com/center/vip/ script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/porntube/modules/WuYouVip.js, requires-body=true, timeout=10, tag=无忧云盘VIP
+http-response ^http://www\.wuxueyun\.com/center/vip/ script-path=https://github.com/litrash/work-tunnel-vless/blob/main/vip_mitm.js, requires-body=true, timeout=10, tag=无忧云盘VIP
 
 [MITM]
 hostname = %APPEND% *.wuxueyun.com
