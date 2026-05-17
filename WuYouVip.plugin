@@ -7,11 +7,11 @@
 DOMAIN-SUFFIX,wuxueyun.com,DIRECT
 
 [Script]
-http-response ^https?://[^/]+/center/vip/vipInfo script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
-http-response ^https?://[^/]+/center/vip/product script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
-http-response ^https?://[^/]+/center/vip/verifyOrder script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
-http-response ^https?://[^/]+/center/vip/createOrder script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
-http-response ^https?://[^/]+/center/vip/verifyOrderBefore script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/vipInfo script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/product script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/verifyOrder script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/createOrder script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/verifyOrderBefore script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
 
 [MITM]
 hostname = %APPEND% *.wuxueyun.com
