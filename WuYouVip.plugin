@@ -1,0 +1,17 @@
+#!name=无忧云盘VIP解锁
+#!desc=拦截无忧云盘VIP相关API，返回VIP会员状态
+#!category=会员解锁
+#!author=万能逆向
+
+[Rule]
+DOMAIN-SUFFIX,wuxueyun.com,DIRECT
+
+[Script]
+http-response ^https?://[^/]+/center/vip/vipInfo script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/product script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/verifyOrder script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/createOrder script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+http-response ^https?://[^/]+/center/vip/verifyOrderBefore script-path=WuYouVip_Loon.js, requires-body=true, max-size=0, timeout=30
+
+[MITM]
+hostname = %APPEND% *.wuxueyun.com
