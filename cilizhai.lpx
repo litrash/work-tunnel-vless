@@ -1,0 +1,15 @@
+#!name=磁力宅智存 会员解锁
+#!desc=MITM 重写 user/get_user_status_big 响应，本地解锁会员判定（倍速/去广告/付费墙/身份显示）。首次运行请查看 Loon 日志确认字段名。
+#!icon=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/icon.png
+#!author=litrash
+#!homepage=https://github.com/litrash/work-tunnel-vless
+
+[Script]
+# 用户状态接口：会员等级、到期时间、会员/SVIP 标记都由它下发
+http-response ^https:\/\/xiaozhai-v1\.miao2023\.cc\/nas_api\/user\/get_user_status_big script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/cilizhai.loon.js, requires-body=true, timeout=30, tag=磁力宅-会员解锁
+
+# 可选：套餐接口只观测不改写，用于核对字段（不需要可删掉）
+# http-response ^https:\/\/xiaozhai-v1\.miao2023\.cc\/nas_api\/member\/get_packages_big_223 script-path=https://raw.githubusercontent.com/litrash/work-tunnel-vless/main/cilizhai.loon.js, requires-body=true, timeout=30, tag=磁力宅-套餐
+
+[MITM]
+hostname = %APPEND% xiaozhai-v1.miao2023.cc
