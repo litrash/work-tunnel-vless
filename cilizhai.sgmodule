@@ -1,0 +1,8 @@
+#!name=磁力宅智存 会员解锁
+#!desc=MITM 重写 user/get_user_status_big 响应，本地解锁会员判定（倍速/去广告/付费墙/身份显示）。首次运行请查看日志确认字段名。
+
+[Script]
+http-response ^https:\/\/xiaozhai-v1\.miao2023\.cc\/nas_api\/user\/get_user_status_big script-path=https://raw.githubusercontent.com/USER/REPO/main/scripts/cilizhai/cilizhai.js, requires-body=1, timeout=30, tag=磁力宅-会员解锁
+
+[MitM]
+hostname = %APPEND% xiaozhai-v1.miao2023.cc
